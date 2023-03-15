@@ -3,9 +3,9 @@
 public class PlayerMovement : MonoBehaviour
 {
     public Animator anim;
+    public SpriteRenderer sP;
 
-
-
+    bool facingRight = true;
     public float moveSpeed;
     public Rigidbody2D rB;
     private Vector2 moveDirection;
@@ -33,11 +33,26 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetBool("IsRunning", false);
         }
-        
-       
-            
-          
-        
+
+        if (moveX < 0 && facingRight)
+        {
+
+            GetComponent<SpriteRenderer>().flipX = true;
+            facingRight = false;
+
+        }
+        else if (moveX > 0 && !facingRight)
+        {
+
+            GetComponent<SpriteRenderer>().flipX = false;
+            facingRight = true;
+        }
+
+
+
+
+
+
     }
 
     void Move()
