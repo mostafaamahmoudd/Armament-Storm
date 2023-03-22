@@ -2595,7 +2595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   checkRadius: 5
-  attackRadius: 2
+  attackRadius: 1
   shouldRotate: 1
   whatIsLayer:
     serializedVersion: 2
