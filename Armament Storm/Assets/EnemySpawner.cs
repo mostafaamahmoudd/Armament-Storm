@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float spawnRate = 10f;
+    [SerializeField] private GameObject enemyPrefabs;
+    [SerializeField] private bool canSpawn = true;
+
+    private void Start()
     {
-        
+        StartCoroutine(Spawner());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator Spawner()
     {
-        
+        WaitForSeconds wait = new WaitForSeconds(spawnRate);
+
+        while (true)
+        {
+            yield return wait;
+
+            Instantiate(enemyPrefabs, transform.position, Quaternion.identity);
+        }
     }
 }
