@@ -55,7 +55,7 @@ public class enemyAI : MonoBehaviour
         if (isInAttackRange)
         {
             rb.velocity = Vector2.zero;
-            anim.SetBool("isRunning", true);
+            anim.SetBool("isRunning", false);
         }
     }
 
