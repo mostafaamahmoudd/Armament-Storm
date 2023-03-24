@@ -63,12 +63,4 @@ public class enemyAI : MonoBehaviour
     {
         rb.MovePosition((Vector2)transform.position + (dir * speed * Time.deltaTime));
     }
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-            target = null;
-        }
-    }
 }

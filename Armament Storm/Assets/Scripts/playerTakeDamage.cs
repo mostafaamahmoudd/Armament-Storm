@@ -20,10 +20,10 @@ public class playerTakeDamage : MonoBehaviour
 
     void Update()
     {
-        if(transform.position.x >= target.transform.position.x)
-        {
-            TakeDamage(5);
-        }
+        //if(transform.position.x >= target.transform.position.x)
+        //{
+        //    TakeDamage(5);
+        //}
     }
 
     void TakeDamage(int damage)
@@ -31,5 +31,14 @@ public class playerTakeDamage : MonoBehaviour
         currentHealth -= damage;
 
         hb.SetHealth(currentHealth);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            TakeDamage(5);
+            Destroy(other.gameObject);
+        }
     }
 }
