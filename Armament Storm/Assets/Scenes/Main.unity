@@ -83258,7 +83258,7 @@ GameObject:
   - component: {fileID: 2111747219}
   - component: {fileID: 2111747220}
   - component: {fileID: 2111747221}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Attack Collider
   m_TagString: PlayerSword
   m_Icon: {fileID: 0}
@@ -83286,7 +83286,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111747218}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
