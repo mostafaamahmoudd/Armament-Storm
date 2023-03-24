@@ -5,7 +5,7 @@ using UnityEngine;
 public class playerTakeDamage : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 100;
-    [SerializeField] private int currentHealth;
+                     public int currentHealth;
 
     private Transform target;
 
