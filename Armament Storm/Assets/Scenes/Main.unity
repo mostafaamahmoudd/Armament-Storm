@@ -2542,7 +2542,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &285859833
 GameObject:
@@ -2555,7 +2555,7 @@ GameObject:
   - component: {fileID: 285859834}
   - component: {fileID: 285859836}
   - component: {fileID: 285859835}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2629,7 +2629,7 @@ GameObject:
   - component: {fileID: 418168566}
   - component: {fileID: 418168568}
   - component: {fileID: 418168567}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2721,7 +2721,7 @@ Transform:
   m_Children:
   - {fileID: 2131608924}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1194233215
 GameObject:
@@ -2805,7 +2805,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1194233219
 MonoBehaviour:
@@ -2862,7 +2862,7 @@ Transform:
   m_Children:
   - {fileID: 53536036}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1741599368
 GameObject:
@@ -2876,7 +2876,7 @@ GameObject:
   - component: {fileID: 1741599371}
   - component: {fileID: 1741599370}
   - component: {fileID: 1741599369}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2974,7 +2974,7 @@ GameObject:
   - component: {fileID: 1899574033}
   - component: {fileID: 1899574034}
   - component: {fileID: 1899574035}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Health bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3095,6 +3095,77 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   fill: {fileID: 285859835}
+--- !u!1 &2111747218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2111747219}
+  - component: {fileID: 2111747220}
+  - component: {fileID: 2111747221}
+  m_Layer: 8
+  m_Name: Attack Collider
+  m_TagString: PlayerSword
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2111747219
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111747218}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2131608924}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2111747220
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111747218}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.7642894, y: 2.22542}
+  m_EdgeRadius: 0
+--- !u!114 &2111747221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111747218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0895075462430834bbfd042861267c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2131608922}
 --- !u!1 &2131608922
 GameObject:
   m_ObjectHideFlags: 0
@@ -3109,8 +3180,8 @@ GameObject:
   - component: {fileID: 2131608926}
   - component: {fileID: 2131608925}
   - component: {fileID: 2131608928}
-  - component: {fileID: 2131608929}
   - component: {fileID: 2131608930}
+  - component: {fileID: 2131608931}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -3180,6 +3251,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1741599372}
+  - {fileID: 2111747219}
   m_Father: {fileID: 543093003}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3263,23 +3335,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 2131608925}
   sP: {fileID: 2131608923}
+  Box: {fileID: 2111747220}
   moveSpeed: 5
   rB: {fileID: 2131608926}
---- !u!114 &2131608929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2131608922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cb4125be66bca049b7b9be99be8322d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  anim: {fileID: 2131608925}
-  circle: {fileID: 0}
 --- !u!114 &2131608930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3295,6 +3353,19 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   hb: {fileID: 1899574035}
+--- !u!114 &2131608931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131608922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4237170b7ad7d1e4ea21b0e1fbfca5b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pMove: {fileID: 2131608928}
 --- !u!1001 &9132583177703741026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3315,7 +3386,7 @@ PrefabInstance:
     - target: {fileID: 9132583177739869463, guid: a3116b1871a5e7245b3aa797be6ebf28,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9132583177739869463, guid: a3116b1871a5e7245b3aa797be6ebf28,
         type: 3}
