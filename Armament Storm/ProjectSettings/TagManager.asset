@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - PlayerSword
+  - Score
   layers:
   - Default
   - TransparentFX

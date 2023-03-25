@@ -5,7 +5,7 @@ using UnityEngine;
 public class playerTakeDamage : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 100;
-                     public int currentHealth;
+    public int currentHealth;
 
     private Transform target;
 
@@ -20,10 +20,7 @@ public class playerTakeDamage : MonoBehaviour
 
     void Update()
     {
-        //if(transform.position.x >= target.transform.position.x)
-        //{
-        //    TakeDamage(5);
-        //}
+
     }
 
     void TakeDamage(int damage)

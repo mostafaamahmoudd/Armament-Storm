@@ -4,22 +4,17 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public ScoreSystem ss;
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        ss = GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreSystem>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("PlayerSword"))
         {
+            ss.killsNum++;
             Destroy(gameObject);
         }
         
