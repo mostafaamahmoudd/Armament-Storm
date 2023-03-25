@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class playerTakeDamage : MonoBehaviour
 {
-    [SerializeField] private int maxHealth = 100;
+    public int maxHealth = 100;
     public int currentHealth;
 
     private Transform target;
@@ -34,7 +34,7 @@ public class playerTakeDamage : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            TakeDamage(5);
+            TakeDamage(10);
             Destroy(other.gameObject);
         }
     }
