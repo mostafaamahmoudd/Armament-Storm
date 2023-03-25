@@ -23,7 +23,7 @@ public class HealthPickUp : MonoBehaviour
         {
             playerHealth.currentHealth = playerHealth.currentHealth + bounsHealth;
             hb.SetHealth(playerHealth.currentHealth);
-            cs.StartNewCoroutine();
+            cs.StartNewCoroutine(transform.position);
             Destroy(gameObject);
         }
     }

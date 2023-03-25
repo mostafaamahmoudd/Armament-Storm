@@ -5,23 +5,29 @@ using UnityEngine;
 public class collectablesSpawner1 : MonoBehaviour
 {
     [SerializeField] private float spawnRate = 2f;
+
     [SerializeField] private GameObject collectablesPrefabs;
+    [SerializeField] private GameObject[] gameObjects;
+
     public bool canSpawn = true;
 
     private void Start()
     {
-        StartNewCoroutine();
+        for (int i = 0; i < gameObjects.Length; i++)
+        {
+            StartNewCoroutine((Vector3) gameObjects[i].transform.position);
+        }
     }
 
-    private IEnumerator Spawner()
+    private IEnumerator Spawner(Vector3 Pos)
     {
         WaitForSeconds wait = new WaitForSeconds(spawnRate);
         yield return wait;
-        Instantiate(collectablesPrefabs, transform.position, Quaternion.identity);
+        Instantiate(collectablesPrefabs, Pos, Quaternion.identity);
     }
 
-    public void StartNewCoroutine()
+    public void StartNewCoroutine(Vector3 newPos)
     {
-        StartCoroutine(Spawner());
+        StartCoroutine(Spawner(newPos));
     }
 }
